@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 36 36">
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M18 8.5C18 7.67157 18.6716 7 19.5 7L32.5 7C33.3284 7 34 7.67157 34 8.5C34 9.32843 33.3284 10 32.5 10L19.5 10C18.6716 10 18 9.32843 18 8.5Z"
+    fill="inherit" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M21 29.5C21 30.3284 20.3284 31 19.5 31L6.5 31C5.67157 31 5 30.3284 5 29.5C5 28.6716 5.67157 28 6.5 28L19.5 28C20.3284 28 21 28.6716 21 29.5Z"
+    fill="inherit" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M19.5 31C18.6716 31 18 30.3284 18 29.5V8.5C18 7.67157 18.6716 7 19.5 7C20.3284 7 21 7.67158 21 8.5L21 29.5C21 30.3284 20.3284 31 19.5 31Z"
+    fill="inherit" />
+</svg>

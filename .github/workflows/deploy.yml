@@ -1,0 +1,51 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    if: github.repository == 'josh2kv/kyobo-nms' && (github.event.pull_request.merged == true || github.event_name == 'push')
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+        env:
+          VITE_APP_API_BASE_URL: ${{ secrets.VITE_APP_API_BASE_URL }}
+          VITE_APP_REPORTS_API: ${{ secrets.VITE_APP_REPORTS_API }}
+          VITE_APP_API_PREFIX: ${{ secrets.VITE_APP_API_PREFIX }}
+          VITE_APP_API_WS: ${{ secrets.VITE_APP_API_WS }}
+          GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
+
+      - name: Deploy to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: 'dist/*'
+          target: '/var/www/kyobo-nms/dist'
+          strip_components: 1
+
+      - name: Execute remote commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/kyobo-nms
+            sudo systemctl restart nginx
