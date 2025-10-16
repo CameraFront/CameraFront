@@ -58,9 +58,9 @@ const InfrastructureReportPage = () => {
             {
               title: '보고서',
             },
-            // {
-            //   title: '구축설비 보고서',
-            // },
+            {
+              title: '구축설비 보고서',
+            },
           ]}
         />
       </div>

@@ -6,8 +6,7 @@ import { removeUserFromSessionStorage } from './clientStorages';
 
 const customFetch = axios.create({
   baseURL:
-  import.meta.env.VITE_APP_API_BASE_URL,  
-  //import.meta.env.VITE_APP_API_BASE_URL + import.meta.env.VITE_APP_API_PREFIX,
+    import.meta.env.VITE_APP_API_BASE_URL + import.meta.env.VITE_APP_API_PREFIX,
   withCredentials: true,
 });
 

@@ -17,7 +17,6 @@ import { Credentials, GlobalState, ResConfig } from './types';
 
 export const GLOBAL_SLICE = 'global';
 
-//디버깅 확인하려고 프론트에서 구현
 // 로그인
 export const signin = createAsyncThunk<
   GlobalState['user'],
@@ -105,7 +104,6 @@ const globalSlice = createSlice({
         state.user = payload;
         message.success(
           `${payload.login.userId}(${payload.login.userNm})님이 로그인했습니다.`,
-    
         );
       }
     });

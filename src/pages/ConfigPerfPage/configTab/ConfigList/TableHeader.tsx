@@ -43,7 +43,7 @@ const TableHeader = () => {
         <Search
           value={searchValue}
           style={{ width: '30rem', marginBottom: 8 }}
-          placeholder="검색"
+          placeholder="장비 검색"
           className="search-bar"
           allowClear
           onChange={e => {
@@ -60,52 +60,7 @@ const TableHeader = () => {
           allowClear
           value={deviceType}
           loading={isDeviceTypeListLoading}
-          placeholder="종류"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="접속 상태"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="화각 상태"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="알람 레벨"
+          placeholder="장비 종류"
           style={{ width: '20rem', marginLeft: '8px' }}
           options={
             resDeviceTypeList?.map(item => ({

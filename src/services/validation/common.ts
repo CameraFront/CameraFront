@@ -155,3 +155,4 @@ export const resLatestTemperatureDataSchema = z.object({
 export const resCheckPwdSchema = z.object({
   result: z.string()
 });
+

@@ -10,11 +10,11 @@ export interface GlobalState {
   };
   isSettingsOpen: boolean;
   user: {
-     global: {
-       colorYn: number;
-       title: number;
-       topicType: number;
-     };
+    global: {
+      colorYn: number;
+      title: number;
+      topicType: number;
+    };
     dashboard: {
       dashboardId: number;
     };
@@ -27,10 +27,10 @@ export interface GlobalState {
       userId: string;
       userNm: string;
     };
-    // devConf: {
-    //   rack: number;
-    //   line: number;
-    // };
+    devConf: {
+      rack: number;
+      line: number;
+    };
   } | null;
 }
 

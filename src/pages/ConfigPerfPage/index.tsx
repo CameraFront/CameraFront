@@ -13,12 +13,12 @@ import { ResManageYn } from '@/types/enum';
 const items: TabsProps['items'] = [
   {
     key: 'config',
-    label: '화각분석',
+    label: '구성',
   },
-  // {
-  //   key: 'perf',
-  //   label: '성능',
-  // },
+  {
+    key: 'perf',
+    label: '성능',
+  },
   // {
   //   key: 'process',
   //   label: '프로세스',
@@ -73,7 +73,7 @@ const ConfigPerfPage = () => {
               title: '홈',
             },
             {
-              title: '화각 분석',
+              title: '구성·성능',
             },
           ]}
         />

@@ -59,7 +59,7 @@ const filteredMessage = useMemo(() => {
 
   // 조건에 맞지 않으면 null 또는 다른 처리
   return null;
-  }, [lastMessage, user?.global?.topicType]);
+}, [lastMessage, user?.global?.topicType]);
   
   // 웹소켓 옵션 메모이제이션
   const webSocketOptions = useMemo(

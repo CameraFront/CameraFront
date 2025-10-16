@@ -20,7 +20,6 @@ export interface UserConfig {
   dashboard: {
     dashboardId: number;
   };
-  // 백엔드랑 맞추기
   login: {
     audibleYn: number;
     roleGroupId: number;

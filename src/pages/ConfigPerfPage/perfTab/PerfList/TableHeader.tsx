@@ -57,7 +57,7 @@ const TableHeader = () => {
         <Search
           value={searchValue}
           style={{ width: '30rem', marginBottom: 8 }}
-          placeholder="검색"
+          placeholder="장비 검색"
           className="search-bar"
           allowClear
           onChange={e => {

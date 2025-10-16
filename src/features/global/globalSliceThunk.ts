@@ -12,8 +12,7 @@ export const signinThunk: AsyncThunkPayloadCreator<
   AsyncThunkConfig
 > = async (credentials, thunkAPI) => {
   try {
-    //const res = await customFetch.post('/login.do', credentials);
-    const res = await customFetch.post('api/auth/login', credentials);
+    const res = await customFetch.post('/login.do', credentials);
 
     addUserSessionStorage(res.data.response);
 

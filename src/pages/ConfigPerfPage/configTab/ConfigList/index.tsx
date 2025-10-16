@@ -45,15 +45,15 @@ const ConfigList = () => {
         align: 'center',
       },
       {
-        title: '카메라명',
+        title: '소속',
         dataIndex: 'managementNm',
         key: 'managementNm',
         ellipsis: true,
-        //width: '16%',
+        width: '16%',
         align: 'center',
       },
       {
-        title: '종류',
+        title: '대분류',
         dataIndex: 'deviceKindNm',
         key: 'deviceKindNm',
         ellipsis: true,
@@ -61,7 +61,7 @@ const ConfigList = () => {
         align: 'center',
       },
       {
-        title: '접속 상태',
+        title: '소분류',
         dataIndex: 'deviceKindNm2',
         key: 'deviceKindNm2',
         ellipsis: true,
@@ -69,7 +69,7 @@ const ConfigList = () => {
         align: 'center',
       },
       {
-        title: '화각 상태',
+        title: '장비명',
         dataIndex: 'deviceNm',
         key: 'deviceNm',
         ellipsis: true,
@@ -77,22 +77,21 @@ const ConfigList = () => {
           <Link to={`${pathname}/${record.deviceKey}`}>{value}</Link>
         ),
         align: 'center',
-        width: '12%'
       },
       {
-        title: '알람 레벨',
+        title: 'IP주소',
         dataIndex: 'deviceIp',
         key: 'deviceIp',
         ellipsis: true,
-        width: '12%',
+        width: '15%',
         align: 'center',
       },
       {
-        title: '수동 화각 분석',
+        title: '관리여부',
         dataIndex: 'manageYnNm',
         key: 'manageYnNm',
         ellipsis: true,
-        width: '12%',
+        width: '8%',
         align: 'center',
       },
     ],

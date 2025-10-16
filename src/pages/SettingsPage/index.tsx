@@ -38,157 +38,82 @@ const SettingsPage = () => {
 
     return [
       {
+        label: '소속 관리',
+        key: SettingsTab.ManagementsTab,
+        children: <BusinessUnitsTab />,
+      },
+      {
+        label: '장비 관리(POE)',
+        key: SettingsTab.DevicesTab,
+        children: <DevicesTab />,
+      },
+      {
+        label: 'AP 관리',
+        key: SettingsTab.TerminalsTab,
+        children: <TerminalsTab />,
+      },
+      {
+        label: '전화기 관리',
+        key: SettingsTab.PhonesTab,
+        children: <PhonesTab />,
+      },
+      {
+        label: '프로세스 관리',
+        key: SettingsTab.ProcessesTab,
+        children: <ProcessesTab />,
+      },
+      {
+        label: '장비매뉴얼 관리',
+        key: SettingsTab.DeviceManualsTab,
+        children: <DeviceManualsTab />,
+      },
+      {
+        label: '설비점검 관리',
+        key: SettingsTab.DeviceInspectionsTab,
+        children: <DeviceInspectionsTab />,
+      },
+      {
+        label: '권한 관리',
+        key: SettingsTab.RolesTab,
+        children: <RolesTab />,
+      },
+      {
+        label: '장애 관리',
+        key: SettingsTab.EventsTab,
+        children: <EventsTab />,
+      },
+      {
         label: '사용자 관리',
         key: SettingsTab.UsersTab,
         children: <UsersTab />,
       },
       {
-        label: '그룹 관리',
-        key: SettingsTab.ManagementsTab,
-        children: <BusinessUnitsTab />,
-      },
-      {
-        label: '카메라 관리',
-        key: SettingsTab.DevicesTab,
-        children: <DevicesTab />,
-      },
-      // 임계치 관리 , 알람 레벨 , 알람 전송 , 수신정보 관리 , 라이선스 관리
-      {
-        label: '기준 이미지 설정',
-        key: SettingsTab.ManagementsTab,
-        children: <BusinessUnitsTab />,
-      },
-      {
-        label: '화각 분석 설정',
-        key: SettingsTab.DevicesTab,
-        children: <DevicesTab />,
-      },
-      {
-        label: '장비 관리자 관리',
+        label: '장비관리자 관리',
         key: SettingsTab.DeviceManagersTab,
         children: <DeviceManagersTab />,
       },
-      // 용어 관리 , 시스템 설정
 
       {
-        label: '관리',
-        key: SettingsTab.TerminalsTab,
-        children: <TerminalsTab />,
-      },
-      {
         label: '임계치 관리',
-        key: SettingsTab.PhonesTab,
-        children: <PhonesTab />,
-      },
-      {
-        label: '알람 레벨',
-        key: SettingsTab.ProcessesTab,
-        children: <ProcessesTab />,
-      },
-      {
-        label: '알람 전송',
-        key: SettingsTab.DeviceManualsTab,
-        children: <DeviceManualsTab />,
-      },
-      {
-        label: '수신정보 관리',
-        key: SettingsTab.DeviceInspectionsTab,
-        children: <DeviceInspectionsTab />,
-      },
-      {
-        label: '라이선스 관리',
-        key: SettingsTab.RolesTab,
-        children: <RolesTab />,
-      },
-      {
-        label: '기준 이미지 설정',
-        key: SettingsTab.EventsTab,
-        children: <EventsTab />,
-      },
-      {
-        label: '장비 관리자 관리',
         key: SettingsTab.ThresholdsTab,
         children: <ThresholdsTab />,
       },
 
-
-      // {
-      //   label: '소속 관리',
-      //   key: SettingsTab.ManagementsTab,
-      //   children: <BusinessUnitsTab />,
-      // },
-      // {
-      //   label: '장비 관리(POE)',
-      //   key: SettingsTab.DevicesTab,
-      //   children: <DevicesTab />,
-      // },
-      // {
-      //   label: 'AP 관리',
-      //   key: SettingsTab.TerminalsTab,
-      //   children: <TerminalsTab />,
-      // },
-      // {
-      //   label: '전화기 관리',
-      //   key: SettingsTab.PhonesTab,
-      //   children: <PhonesTab />,
-      // },
-      // {
-      //   label: '프로세스 관리',
-      //   key: SettingsTab.ProcessesTab,
-      //   children: <ProcessesTab />,
-      // },
-      // {
-      //   label: '장비매뉴얼 관리',
-      //   key: SettingsTab.DeviceManualsTab,
-      //   children: <DeviceManualsTab />,
-      // },
-      // {
-      //   label: '설비점검 관리',
-      //   key: SettingsTab.DeviceInspectionsTab,
-      //   children: <DeviceInspectionsTab />,
-      // },
-      // {
-      //   label: '권한 관리',
-      //   key: SettingsTab.RolesTab,
-      //   children: <RolesTab />,
-      // },
-      // {
-      //   label: '장애 관리',
-      //   key: SettingsTab.EventsTab,
-      //   children: <EventsTab />,
-      // },
-      // {
-      //   label: '사용자 관리',
-      //   key: SettingsTab.UsersTab,
-      //   children: <UsersTab />,
-      // },
-      // {
-      //   label: '장비관리자 관리',
-      //   key: SettingsTab.DeviceManagersTab,
-      //   children: <DeviceManagersTab />,
-      // },
-
-      // {
-      //   label: '임계치 관리',
-      //   key: SettingsTab.ThresholdsTab,
-      //   children: <ThresholdsTab />,
-      // },
-
-      // {
-      //   label: '장비이미지 관리',
-      //   key: SettingsTab.DeviceImagesTab,
-      //   children: <DeviceImagesTab />,
-      // },
-      // {
-      //   label: '오디오 관리',
-      //   key: SettingsTab.AudioFilesTab,
-      //   children: <AudiosTab />,
-      // },
-      // {
-      //   label: '접속이력 관리',
-      //   key: SettingsTab.LoginHistoryTab,
-      //   children: <LoginHistoryTab />,
-      // },
+      {
+        label: '장비이미지 관리',
+        key: SettingsTab.DeviceImagesTab,
+        children: <DeviceImagesTab />,
+      },
+      {
+        label: '오디오 관리',
+        key: SettingsTab.AudioFilesTab,
+        children: <AudiosTab />,
+      },
+      {
+        label: '접속이력 관리',
+        key: SettingsTab.LoginHistoryTab,
+        children: <LoginHistoryTab />,
+      },
     ];
   }, [user]);
 

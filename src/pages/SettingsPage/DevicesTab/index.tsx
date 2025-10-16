@@ -85,30 +85,30 @@ const DevicesTab = () => {
         key: 'managementNm',
       },
       {
-        title: '상위소속',
+        title: '장비종류',
         dataIndex: 'deviceKindNm',
         key: 'deviceKindNm',
       },
       {
-        title: '하위소속',
+        title: '장비명',
         dataIndex: 'deviceNm',
         key: 'deviceNm',
       },
-      // {
-      //   title: '위치',
-      //   dataIndex: 'pstnNm',
-      //   key: 'pstnNm',
-      // },
-      // {
-      //   title: 'IP주소',
-      //   dataIndex: 'deviceIp',
-      //   key: 'deviceIp',
-      // },
-      // {
-      //   title: '관리여부',
-      //   dataIndex: 'manageYnNm',
-      //   key: 'manageYnNm',
-      // },
+      {
+        title: '위치',
+        dataIndex: 'pstnNm',
+        key: 'pstnNm',
+      },
+      {
+        title: 'IP주소',
+        dataIndex: 'deviceIp',
+        key: 'deviceIp',
+      },
+      {
+        title: '관리여부',
+        dataIndex: 'manageYnNm',
+        key: 'manageYnNm',
+      },
     ],
     [],
   );

@@ -108,23 +108,23 @@ const TableSection = () => {
         align: 'center',
       },
       {
-        title: '카메라명',
+        title: '소속',
         dataIndex: 'managementNm',
         key: 'managementNm',
         ellipsis: true,
-        //width: '10%',
+        width: '10%',
         align: 'center',
       },
       {
-        title: '접속 상태',
+        title: '소분류',
         dataIndex: 'deviceKindNmSub',
         key: 'deviceKindNmSub',
         ellipsis: true,
-        width: '12%',
+        width: '10%',
         align: 'center',
       },
       {
-        title: '화각 상태',
+        title: '장비명',
         dataIndex: 'deviceNm',
         key: 'deviceNm',
         ellipsis: true,
@@ -132,31 +132,30 @@ const TableSection = () => {
           <Link to={`${pathname}/${record.deviceKey}`}>{value}</Link>
         ),
         align: 'center',
-        width: '12%'
       },
       {
-        title: '알람 레벨',
+        title: '등급',
         dataIndex: 'eventNm',
         key: 'eventNm',
         ellipsis: true,
-        width: '12%',
+        width: '5%',
         render: (value: EventTypeEn) => <EventDot type={value} hasText />,
         align: 'center',
       },
-      // {
-      //   title: '장애명',
-      //   dataIndex: 'eventMsg',
-      //   key: 'eventMsg',
-      //   ellipsis: true,
-      //   // width: '15%',
-      //   align: 'center',
-      // },
+      {
+        title: '장애명',
+        dataIndex: 'eventMsg',
+        key: 'eventMsg',
+        ellipsis: true,
+        // width: '15%',
+        align: 'center',
+      },
       {
         title: '발생일시',
         dataIndex: 'ocDate',
         key: 'ocDate',
         ellipsis: true,
-        width: '23%',
+        width: '18%',
         align: 'center',
       },
       ...(isDeveloper
@@ -202,6 +201,26 @@ const TableSection = () => {
   return (
     <Wrapper>
       <div className="header">
+        <Select<number>
+          allowClear
+          value={deviceType}
+          loading={isDeviceTypeListLoading}
+          placeholder="장비 종류"
+          style={{ width: '20rem', marginLeft: '8px' }}
+          options={
+            resDeviceTypeList?.map(item => ({
+              label: item.deviceKindNm,
+              value: item.deviceKind,
+            })) || []
+          }
+          onChange={onDeviceTypeChange}
+          onClear={onDeviceTypeClear}
+        />
+        <Checkbox.Group
+          value={eventTypes}
+          options={checkboxOptions}
+          onChange={onCheck}
+        />
         <Search
           allowClear
           style={{ maxWidth: '28rem' }}
@@ -218,57 +237,6 @@ const TableSection = () => {
             });
           }}
         />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="접속 상태"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="화각 상태"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        <Select<number>
-          allowClear
-          value={deviceType}
-          loading={isDeviceTypeListLoading}
-          placeholder="알람 레벨"
-          style={{ width: '20rem', marginLeft: '8px' }}
-          options={
-            resDeviceTypeList?.map(item => ({
-              label: item.deviceKindNm,
-              value: item.deviceKind,
-            })) || []
-          }
-          onChange={onDeviceTypeChange}
-          onClear={onDeviceTypeClear}
-        />
-        {/* <Checkbox.Group
-          value={eventTypes}
-          options={checkboxOptions}
-          onChange={onCheck}
-        /> */}
-        
         <Tooltip>
           <Button
               icon={<SyncOutlined spin={isUnresolvedEventsLoading} />}

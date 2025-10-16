@@ -70,7 +70,6 @@ export const configPerfApi = baseApi.injectEndpoints({
           url: `${DEVICE_PATH}/updatePortMngYn.do`,
           method: 'POST',
           body: {
-            // key 백엔드랑 맞추기
             deviceKey: deviceId,
             portKey: portId,
             manageYn: isManaged,

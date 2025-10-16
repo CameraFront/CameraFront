@@ -49,7 +49,7 @@ const CriticalEventModal = ({ data, onCloseModal }: Props) => {
   useEffect(() => {
     if (data) {
       if (
-        eventDatas.length === 0 && 
+        eventDatas.length === 0 &&
         data.topicType !== user?.global.topicType
       ) {
         onCloseModal();
@@ -60,7 +60,7 @@ const CriticalEventModal = ({ data, onCloseModal }: Props) => {
   useEffect(() => {
     if (data) {
       if (
-        user?.global.topicType == 0 || 
+        user?.global.topicType == 0 ||
         data.topicType == user?.global.topicType
       ) {
         const newEvent = { ...data, id: Date.now() };
